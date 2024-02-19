@@ -17,6 +17,4 @@ The Outrageously Bad Fashion Accessories Catalog is a platform where users can d
 - **Search Functionality:** Easily search for specific fashion accessories or browse through categories to find items of interest.
 
 ## Student Detail
-### By Aman Agrawal
-### from squad 59 
-### Chitkara University
+Aman Agrawal from squad 59 , kalvium 

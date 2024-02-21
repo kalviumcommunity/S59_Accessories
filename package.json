@@ -1,0 +1,14 @@
+{
+  "name": "s59_accessories",
+  "version": "1.0.0",
+  "description": "Welcome to the Funniest Bad Fashion Accessories Readme!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}

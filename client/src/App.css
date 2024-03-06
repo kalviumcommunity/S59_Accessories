@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar , .logo , .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5px;
+}
+.logo{
+    color: rgb(13, 25, 0);
+}
+.navbar{
+    background-color: rgba(154,166,130,255);
+    width: 99.3vw;
+    color: rgb(255, 255, 255);
+
+}
+a , li{
+    list-style-type: none;
+    text-decoration: none;
+}
+.navbar-link{
+    padding: 10px;
+    margin: 2px;
+    color: white;
+}
+input{
+    width: 20vw;
+    background-color: rgba(154,166,130,255);
+    border: none;
+    border-bottom: 2px solid red;
+    padding: 5px;
+}
+.navbar-link:hover{
+    background-color: rgba(46, 73, 25, 0.536);
+    border-radius: 5px;
+}

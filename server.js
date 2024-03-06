@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = 8081;
 const {connectDB, checkConnected}=require('./db.js')
+const mongoose = require('mongoose')
+const routes = require('./routes.js')
+
 
 connectDB()
 app.get('/ping' , (req , res)=>{
@@ -20,3 +23,6 @@ app.get("/",(req,res)=>{
         res.send("Connection failed!")
     }
 });
+
+app.use(express.json())
+app.use('/api',routes)

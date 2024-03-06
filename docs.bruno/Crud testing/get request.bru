@@ -1,0 +1,19 @@
+meta {
+  name: get request
+  type: http
+  seq: 1
+}
+
+delete {
+  url: http://localhost:8081/api/65e7fac14a12d53b8748c421
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "item": "Straw gogles",
+    "type": "Unisex accessory",
+    "material": "plastic"
+  }
+}

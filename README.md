@@ -7,6 +7,11 @@ Welcome to the Funniest Bad Fashion Accessories Readme!
 The Outrageously Bad Fashion Accessories Catalog is a platform where users can discover, share, and laugh at the most outrageous and unconventional fashion accessories from around the world. From quirky hats to bizarre handbags, this catalog showcases the weirdest and most unconventional items in the fashion industry.
 
 ## Features
+- **Deployed Link:** https://weirdccessories.pages.dev/
+
+- **Project Link:** https://github.com/kalviumcommunity/S59_Accessories
+
+## Features
 
 - **Browse and Discover:** Explore a vast collection of uploaded fashion accessories, sorted by categories or popularity.
 

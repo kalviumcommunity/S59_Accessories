@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/NavBar'
+import FrontPage from './components/FrontPage'
 function App() {
 
   return (
-    <div className="Header">
-        <Navbar />
-        more content comming soon...
+    <div className="FirstBanner">
+    <div className='Navigation'>
+      <Navbar />
+    </div>
+        <FrontPage />
     </div>
   )
 }

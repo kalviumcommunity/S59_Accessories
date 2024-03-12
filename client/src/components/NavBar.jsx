@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img className="logo-image" src='/public/logo.png' width='70px' />
+                <img className="logo-image" src='/logo.png' width='70px' />
                 <h1 className="logo-title">Weirdiest Accessories</h1>
             </div>
 
@@ -12,13 +12,10 @@ function Navbar() {
             <ul className="menu">
                 <input type='text' placeholder='Search for anyitems...'/>
                 <li className="section">
-                    <a href="#" className="navbar-link">Home</a>
+                    Category
                 </li>
                 <li className="section">
-                    <a href="#" className="navbar-link">Category</a>
-                </li>
-                <li className="section">
-                    <a href="#" className="navbar-link">About Project</a>
+                    About Project
                 </li>
             </ul>
         </nav>

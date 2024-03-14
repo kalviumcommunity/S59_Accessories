@@ -9,20 +9,16 @@ const data = new mongoose.Schema({
         type : String,
         required : true
     },
-    material : {
+    image : {
         type : String,
         required : true
     },
+    material : {
+        type : Array,
+        // required : true
+    },
     function : {
-        type : Array,
-        // required : true
-    },
-    brands : {
-        type : Array,
-        // required : true
-    },
-    trends : {
-        type : Array,
+        type : String,
         // required : true
     }
 })

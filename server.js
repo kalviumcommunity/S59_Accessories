@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const app = express();
 const port = 8081;
 const {connectDB, checkConnected}=require('./db.js')
@@ -7,6 +8,7 @@ const routes = require('./routes.js')
 
 
 connectDB()
+app.use(cors())
 app.get('/ping' , (req , res)=>{
     res.send("pong");
 })

@@ -12,6 +12,10 @@
     text-decoration: none;
 }
 
+.navbar{
+    background-color: rgb(29, 48, 48);
+}
+
 .logo-title , li , a{
     text-decoration: none;
     color: white;
@@ -60,4 +64,28 @@
 }
 .banner-img img{
     width: 20vw;
+}
+.box{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    height: 400px;
+    background-color: rgb(67, 87, 123);
+    border-radius: 5px;
+}
+.box .thumbnail{
+    text-align: center;
+}
+
+.heading h3{
+    color: white;
+}
+.description{
+    color: rgb(211, 236, 159);
+}
+.types{
+    padding: 8px;
+    background-color: rgb(139, 139, 4);
+    width: auto;
+    border-radius: 4px;
 }

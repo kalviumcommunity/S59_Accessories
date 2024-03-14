@@ -6,7 +6,7 @@ function Entities() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('');
+        const response = await fetch('http://localhost:8081/api');
         const data = await response.json();
         setEntities(data);
       } catch (error) {
@@ -21,9 +21,20 @@ function Entities() {
     <div>
       <h1>Lets see few of them ...</h1>
       <div id="container">
-        {entities.map(entity => (
-          <div key={entity.id}>
-            <h2>{entity.name}</h2>
+        {entities && entities.map(entity => (
+          <div key={entity._id} className='box'>
+            <div className='thumbnail'>
+              <img src={entity.image} alt={entity.item} width="200px"/>
+            </div>
+            <div className="description">
+              <div className="heading">
+                <h3>{entity.item}</h3>
+                <p>{entity.function}</p>
+              </div><br></br>
+              <span className="types">
+                {entity.type}
+              </span>
+            </div>
           </div>
         ))}
       </div>

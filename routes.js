@@ -8,7 +8,7 @@ router.get('/',async (req , res) => {
         const Accessories = await Accessory.find()
         res.json(Accessories)
     }catch (err){
-        res.json({error : " An Error occured"})
+        res.json({error : " An Error occured while getting the data ."})
     }
 })
 
@@ -19,7 +19,7 @@ router.get('/:id' , async (req, res)=>{
         res.json(AccessoryFound)
     }
     catch(err){
-        res.json({error : " An error occurred"})
+        res.json({error : " An error occurred 1"})
     }
 })
 
@@ -28,17 +28,16 @@ router.post('/add-accessory', async (req , res)=>{
         AccessoryID : req.body.AccessoryID,
         item : req.body.item,
         type : req.body.type,
-        material : req.body.material,
-        function : req.body.function , 
-        brands : req.body.brands , 
-        trends : req.body.trends,
+        image : req.body.image,
+        material : req.body.material , 
+        function : req.body.function 
     })
     try{
         const saveAccessories = await newAccessory.save()
         res.json(saveAccessories)
     }
     catch (err){
-        res.json({error : "An error occured"})
+        res.json({error : "An error occured 3"})
     }
 })
 

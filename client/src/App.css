@@ -65,6 +65,14 @@
 .banner-img img{
     width: 20vw;
 }
+#container{
+    width: 100vw;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .box{
     width: 300px;
     padding: 10px;
@@ -73,9 +81,17 @@
     background-color: rgb(67, 87, 123);
     border-radius: 5px;
 }
+.thumbnail{
+    width: 300px;
+    height: 270px;
+}
 .box .thumbnail{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .heading h3{
     color: white;

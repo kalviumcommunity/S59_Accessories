@@ -4,17 +4,13 @@ function Entities() {
   const [entities, setEntities] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:8081/api');
-        const data = await response.json();
+    fetch('https://s59-accessories.onrender.com/api')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
         setEntities(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+      })
+      .catch(error => console.error('Error:', error));
   }, []);
 
   return (

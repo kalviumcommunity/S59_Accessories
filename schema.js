@@ -23,6 +23,6 @@ const data = new mongoose.Schema({
     }
 })
 
-const dataSet = mongoose.model('dataSet',data);
+const dataSet = mongoose.model('accessories',data);
 
 module.exports = dataSet

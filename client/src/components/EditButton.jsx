@@ -10,7 +10,7 @@ async function handleEdit(id, data) {
       },
       body: JSON.stringify(data),
     });
-
+    console.log(response)
     if (!response.ok) {
       throw new Error(`Error editing entity with ID ${id}: ${response.statusText}`);
     }

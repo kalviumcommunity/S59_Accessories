@@ -77,7 +77,7 @@
     width: 300px;
     padding: 10px;
     margin: 10px;
-    height: 400px;
+    height: 410px;
     background-color: rgb(67, 87, 123);
     border-radius: 5px;
 }
@@ -92,6 +92,11 @@
     align-items: center;
 }
 
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .heading h3{
     color: white;
@@ -99,9 +104,104 @@
 .description{
     color: rgb(211, 236, 159);
 }
-.types{
+.types span{
     padding: 8px;
     background-color: rgb(139, 139, 4);
     width: auto;
     border-radius: 4px;
+}
+.typesNButton , .typesNButton div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.editSection button{
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 2px;
+}
+
+.editSection button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+form.editform {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 21vh;
+    left: 39vw;
+    width: 21vw;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+form.editform label {
+    margin-bottom: 10px;
+}
+
+form.editform input[type="text"],
+form.editform textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+form.editform textarea {
+    height: 80px; 
+}
+
+form.editform button {
+    padding: 10px 15px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+form.editform button:hover {
+    background-color: #0056b3; 
+}
+
+form.editform button[type="submit"] {
+    margin-right: 10px;
+}
+
+form.editform button[type="button"] {
+    background-color: #6c757d; 
+}
+
+form.editform button[type="button"]:hover {
+    background-color: #5a6268; 
+}
+
+@media (min-width: 768px) {
+    .typesNButton button{
+    padding: 0.25em 0.75em;
+  }
 }

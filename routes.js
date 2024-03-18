@@ -41,7 +41,7 @@ router.post('/add-accessory', async (req , res)=>{
     }
 })
 
-router.patch('/:id' , async (req,res)=>{
+router.put('/:id' , async (req,res)=>{
     try{
         const AccessoryFound = await Accessory.findByIdAndUpdate(req.params.id, req.body , {new : true});
         if(!AccessoryFound){

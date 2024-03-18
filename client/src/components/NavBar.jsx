@@ -15,6 +15,9 @@ function Navbar() {
                     Category
                 </li>
                 <li className="section">
+                    Add an accessory
+                </li>
+                <li className="section">
                     About Project
                 </li>
             </ul>

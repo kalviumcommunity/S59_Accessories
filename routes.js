@@ -12,6 +12,17 @@ router.get('/',async (req , res) => {
     }
 })
 
+router.patch('/:id' , async (req,res)=>{
+    try{
+        const AccessoryFound = await Accessory.findByIdAndUpdate(req.params.id, req.body , {new : true});
+        if(!AccessoryFound){
+            return res.status(404).json({error : "Accessory not found "})
+        }
+        res.json(AccessoryFound);
+    }catch (err){
+        res.status(500).send('Error: '+ err)
+    }
+})
 
 router.get('/:id' , async (req, res)=>{
     try{

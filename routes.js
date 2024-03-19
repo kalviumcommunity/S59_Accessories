@@ -34,23 +34,24 @@ router.get('/:id' , async (req, res)=>{
     }
 })
 
-router.post('/add-accessory', async (req , res)=>{
+router.post('/add-accessory', async (req, res) => {
     const newAccessory = new Accessory({
-        AccessoryID : req.body.AccessoryID,
-        item : req.body.item,
-        type : req.body.type,
-        image : req.body.image,
-        material : req.body.material , 
-        function : req.body.function 
-    })
-    try{
-        const saveAccessories = await newAccessory.save()
-        res.json(saveAccessories)
+        AccessoryID: req.body.AccessoryID,
+        item: req.body.item,
+        type: req.body.type,
+        image: req.body.image,
+        material: req.body.material,
+        function: req.body.function
+    });
+
+    try {
+        const saveAccessories = await newAccessory.save();
+        res.json(saveAccessories);
+    } catch (err) {
+        console.error('Error adding accessory:', err);
+        res.status(500).json({ error: 'An error occurred while saving the accessory' });
     }
-    catch (err){
-        res.json({error : "An error occured 3"})
-    }
-})
+});
 
 router.put('/:id' , async (req,res)=>{
     try{

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
+import AddItem from './AddItem';
 
 function Navbar() {
     return (
@@ -10,12 +12,12 @@ function Navbar() {
 
             
             <ul className="menu">
-                <input type='text' placeholder='Search for anyitems...'/>
+                <input type='text' placeholder='Search for any items...' />
                 <li className="section">
-                    Category
+                    <Link to="/">Home</Link>
                 </li>
                 <li className="section">
-                    Add an accessory
+                    <Link to="/add-item">Add an accessory</Link>
                 </li>
                 <li className="section">
                     About Project

@@ -2,6 +2,26 @@ const express = require('express')
 const router = express.Router();
 const {connectDB} = require('./db.js')
 const Accessory = require('./schema.js')
+const Joi = require('joi'); 
+
+const userSchema = Joi.object({
+    item: Joi.string().required(),
+    type: Joi.string().required(),
+    image: Joi.string(),
+    material: Joi.array(),
+    function : Joi.string()
+})
+
+const checkValidation = (input, schema) => {
+    const { error } = schema.validate(input)
+    if (error) {
+        return false
+    }
+    else {
+        return true
+    }
+}
+
 
 router.get('/',async (req , res) => {
     try{
@@ -35,6 +55,10 @@ router.get('/:id' , async (req, res)=>{
 })
 
 router.post('/add-accessory', async (req, res) => {
+    const isValid = checkValidation(req.body, userSchema);
+    if (!isValid) {
+        return res.status(400).json({ error: 'Invalid input data' });
+    }
     const newAccessory = new Accessory({
         AccessoryID: req.body.AccessoryID,
         item: req.body.item,

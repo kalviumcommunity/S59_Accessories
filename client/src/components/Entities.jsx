@@ -2,16 +2,20 @@ import React, { useState, useEffect } from 'react';
 import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
 
+export const fetchData = (setData) => {
+  fetch('https://s59-accessories.onrender.com/api')
+    .then(response => response.json())
+    .then(data => {
+      setData(data);
+    })
+    .catch(error => console.error('Error:', error));
+};
+
 function Entities() {
   const [entities, setEntities] = useState([]);
 
   useEffect(() => {
-    fetch('https://s59-accessories.onrender.com/api')
-      .then(response => response.json())
-      .then(data => {
-        setEntities(data);
-      })
-      .catch(error => console.error('Error:', error));
+    fetchData(setEntities); 
   }, []);
 
   return (
@@ -29,16 +33,16 @@ function Entities() {
                 <p>{entity.function}</p>
               </div><br></br>
               <div className='flex'>
-              <div className='types'>
-              <span className="types">
-                {entity.type}
-                </span>
+                <div className='types'>
+                  <span className="types">
+                    {entity.type}
+                  </span>
                 </div>
                 <div className='editSection flex'>
-                <EditButton id={entity._id} name={entity.item} type={entity.type} description={entity.function} image={entity.image} material={entity.material} />
-                <DeleteButton id={entity._id} />
+                  <EditButton id={entity._id} name={entity.item} type={entity.type} description={entity.function} image={entity.image} material={entity.material} fetchData={() => fetchData(setEntities)} />
+                  <DeleteButton id={entity._id} fetchData={() => fetchData(setEntities)} />
                 </div>
-                </div>
+              </div>
             </div>
           </div>
         ))}

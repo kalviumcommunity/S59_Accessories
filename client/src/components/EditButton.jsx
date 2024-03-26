@@ -14,7 +14,7 @@ async function handleEdit(id, data) {
     if (!response.ok) {
       throw new Error(`Error editing entity with ID ${id}: ${response.statusText}`);
     }
-
+    fetchData()
     console.log(`Edit entity with ID: ${id}`);
     const responseData = await response.json();
     console.log(responseData);
@@ -23,7 +23,7 @@ async function handleEdit(id, data) {
   }
 }
 
-function EditButton({ id, name, type, image, description, material }) {
+function EditButton({ id, name, type, image, description, material , fetchData}) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(name);
   const [editedType, setEditedType] = useState(type);
@@ -62,7 +62,7 @@ function EditButton({ id, name, type, image, description, material }) {
       description: editedDescription,
       material: editedMaterial.split(',').map(material => material.trim()) 
     };
-    handleEdit(id, data);
+    handleEdit(id, data , fetchData);
     setIsEditing(false);
     
   };

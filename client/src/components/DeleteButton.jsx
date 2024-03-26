@@ -1,5 +1,5 @@
 import React from 'react';
-function DeleteButton({ id }) {
+function DeleteButton({ id , fetchData}) {
   const handleClick = async () => {
     try {
       const response = await fetch(`https://s59-accessories.onrender.com/api/${id}`, {
@@ -8,13 +8,13 @@ function DeleteButton({ id }) {
           'Content-Type': 'application/json',
         },
       });
-
+      
       if (!response.ok) {
         throw new Error(`Error deleting entity with ID ${id}: ${response.statusText}`);
       }
-
-      // Optionally, you might want to perform additional actions after successful deletion.
-
+      fetchData()
+      
+      
     } catch (err) {
       console.error('Error deleting entity:', err.message);
     }

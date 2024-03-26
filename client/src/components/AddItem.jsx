@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { fetchData } from "./Entities";
 async function handleAddItem(data) {
   try {
     const response = await fetch(
@@ -37,6 +37,7 @@ function AddItem() {
   useEffect(() => {
     let confirmationTimer;
     if (confirmationMessage) {
+      fetchData();
       confirmationTimer = setTimeout(() => {
         setConfirmationMessage("");
       }, 3000);
